@@ -1,0 +1,12 @@
+<launch>
+    <node name="fcu" pkg="asctec_hl_interface" type="hl_node" output="screen" clear_params="true">
+	<rosparam file="$(find asctec_hl_interface)/launch/fcu_parameters.yaml" />
+        <rosparam file="$(find asctec_hl_interface)/launch/ssdk_parameters.yaml" />        
+    </node>
+	<node pkg="vicon_bridge" type="vicon_bridge" name="vicon" output="screen">
+           <param name="stream_mode" value="ClientPull" type="str" />
+           <param name="datastream_hostport" value="vicon:801" type="str" />
+           <param name="tf_ref_frame_id" value="/world" type="str" />
+        </node>
+    <node name="waypoint_server" pkg="asctec_hl_interface" type="waypoint_server" output="screen" clear_params="true"/>
+</launch>

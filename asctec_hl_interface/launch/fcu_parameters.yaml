@@ -9,5 +9,5 @@ fcu/packet_rate_ekf_state:  0.0
 fcu/max_velocity_xy:        0.5
 fcu/max_velocity_z:         0.5
 
-fcu/state_estimation:       off
-fcu/position_control:       off
+fcu/state_estimation:       HighLevel_SSDK
+fcu/position_control:       HighLevel

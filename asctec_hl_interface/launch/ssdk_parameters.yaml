@@ -30,4 +30,4 @@ ssdk/p49:            2.0     # max acc refmodel z [m/s^2]
 ssdk/p16:            5.0     # max speed refmodel stick input
 
 ssdk/tf_ref_frame_id: world
-ssdk/tf_tracked_frame_id: pelican
+ssdk/tf_tracked_frame_id: vicon/quad0/quad0
